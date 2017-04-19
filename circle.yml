@@ -1,0 +1,17 @@
+#####
+# Circle CI
+# 
+# For running docker images on circle ci, see: https://circleci.com/docs/docker
+# For circle.yml explanation, see: https://circleci.com/docs/manually
+# Python specific configuration, see: https://circleci.com/docs/language-python
+#####
+
+
+dependencies:
+    pre:
+        - pip install grpcio
+        - pip install grpcio-tools
+
+test:
+    override:
+        python -m grpc_tools.protoc -I .  --python_out=. --grpc_python_out=. *.proto

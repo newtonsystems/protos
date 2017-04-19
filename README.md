@@ -1,2 +1,2 @@
 # protos
-A repository containing all proto files
+A repository containing all proto files .proto

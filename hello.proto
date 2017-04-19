@@ -1,0 +1,28 @@
+//
+// James Tarball
+// Newtonsystems 2017
+//
+// Proto buffer service and message definitions 
+// for hello package
+//
+// https://developers.google.com/protocol-buffers/docs/style
+
+syntax = "proto3";
+
+package hello;
+
+
+service Hello {
+  // Hello service 
+  rpc sayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
