@@ -7,17 +7,36 @@
 #####
 
 
+## Customize the test machine
 machine:
-    services:
-        - docker
-    pre:
-      - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
 
+  python:
+    version: 2.7.10
+
+  timezone:
+    Europe/London # Set the timezone
+
+## Customize dependencies
 dependencies:
-    pre:
-        - pip install grpcio
-        - pip install grpcio-tools
+  pre:
+      - pip install grpcio
+      - pip install grpcio-tools
 
+
+## Customize test commands
 test:
-    override:
-        python -m grpc_tools.protoc -I .  --python_out=. --grpc_python_out=. *.proto
+  override:
+    - python -m grpc_tools.protoc -I .  --python_out=. --grpc_python_out=. *.proto
+
+## Customize deployment commands
+# deployment:
+#   staging:
+#     branch: master
+#     heroku:
+#       appname: foo-bar-123
+
+## Custom notifications
+# notify:
+#   webhooks:
+#     # A list of hashes representing hooks. Only the url field is supported.
+#     - url: https://someurl.com/hooks/circle
