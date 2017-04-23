@@ -33,7 +33,7 @@ deployment:
   production:
     branch: master
     commands:
-      curl -u $CIRCLE_API_TOKEN: -d {} https://circleci.com/api/v1.1/project/github/newtonsystems/grpc_types/tree/$CIRCLE_BRANCH
+      - curl -u $CIRCLE_API_TOKEN: -d {} https://circleci.com/api/v1.1/project/github/newtonsystems/grpc_types/tree/$CIRCLE_BRANCH
 
 #   staging:
 #     branch: master
