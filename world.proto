@@ -1,0 +1,27 @@
+//
+// James Tarball
+// Newtonsystems 2017
+//
+// Proto buffer service and message definitions 
+// for world package
+//
+// https://developers.google.com/protocol-buffers/docs/style
+
+syntax = "proto3";
+
+package world;
+
+
+service World {
+  // World service 
+  rpc sayWorld (WorldRequest) returns (WordResponse) {}
+}
+
+
+message WorldRequest {
+}
+
+// The response message containing the world greetings
+message WordResponse {
+  string message = 1;
+}
