@@ -19,6 +19,7 @@ service World {
 
 
 message WorldRequest {
+	string message = 1;
 }
 
 // The response message containing the world greetings
