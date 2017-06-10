@@ -8,16 +8,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: python:2.7.10
+      - image: newtonsystems/tools-docker-grpc-tools:0.2.0
     working_directory: ~/protos
     steps:
       - checkout
-
-      # Install Python gRPC tools. (TODO: Skip download if already in cache.)
-      - run:
-          name: Install gRPC tools
-          command: |
-            pip install grpcio grpcio-tools
 
       - run:
           name: Run basic check of protos by running compile tool
