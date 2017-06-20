@@ -11,5 +11,5 @@ syntax = "proto3";
 
 package globalapi;
 
-import "hello.proto";
-import "world.proto";
+import public "hello.proto";
+import public "world.proto";
