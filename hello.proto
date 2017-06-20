@@ -3,13 +3,13 @@
 // Newtonsystems 2017
 //
 // Proto buffer service and message definitions 
-// for hello package
+// for hello
 //
 // https://developers.google.com/protocol-buffers/docs/style
 
 syntax = "proto3";
 
-package hello;
+package grpc_types;
 
 
 service Hello {

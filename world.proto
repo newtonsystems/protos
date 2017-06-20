@@ -3,13 +3,13 @@
 // Newtonsystems 2017
 //
 // Proto buffer service and message definitions 
-// for world package
+// for world
 //
 // https://developers.google.com/protocol-buffers/docs/style
 
 syntax = "proto3";
 
-package world;
+package grpc_types;
 
 
 service World {
