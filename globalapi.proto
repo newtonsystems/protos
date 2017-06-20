@@ -1,0 +1,15 @@
+//
+// James Tarball
+// Newtonsystems 2017
+//
+// Proto buffer service and message definitions 
+// for hello package
+//
+// https://developers.google.com/protocol-buffers/docs/style
+
+syntax = "proto3";
+
+package hello;
+
+import "hello.proto";
+import "world.proto";
