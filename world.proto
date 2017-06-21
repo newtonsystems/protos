@@ -9,7 +9,7 @@
 
 syntax = "proto3";
 
-package world;
+package grpc_types;
 
 
 service World {

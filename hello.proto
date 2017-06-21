@@ -9,7 +9,7 @@
 
 syntax = "proto3";
 
-package hello;
+package grpc_types;
 
 
 service Hello {
