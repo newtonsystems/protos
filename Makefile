@@ -16,9 +16,9 @@ WARN_STRING=$(WARN_COLOR)[WARNINGS]$(NO_COLOR)
 PROTOS_DIR=.
 
 
-all: build_python
+all: check_build_python
 
-build_python:
+check_build_python:
 	@echo "$(INFO) Building Python Files from .protos"
 	mkdir -p _build
 	python -m grpc_tools.protoc -I $(PROTOS_DIR)  --python_out=./_build/ --grpc_python_out=./_build/ $(PROTOS_DIR)/*.proto
