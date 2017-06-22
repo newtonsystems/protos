@@ -3,7 +3,7 @@
 // Newtonsystems 2017
 //
 // Proto buffer service and message definitions 
-// for world package
+// for hello package
 //
 // https://developers.google.com/protocol-buffers/docs/style
 
@@ -11,18 +11,12 @@ syntax = "proto3";
 
 package grpc_types;
 
+import "hello.proto";
+import "world.proto";
 
-service World {
-  // World service 
+service GlobalAPI {
+  // All API calls from all services
+  rpc sayHello (HelloRequest) returns (HelloResponse) {}
   rpc sayWorld (WorldRequest) returns (WorldResponse) {}
 }
 
-
-message WorldRequest {
-	string message = 1;
-}
-
-// The response message containing the world greetings
-message WorldResponse {
-  string message = 1;
-}

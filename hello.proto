@@ -14,7 +14,7 @@ package grpc_types;
 
 service Hello {
   // Hello service 
-  rpc sayHello (HelloRequest) returns (HelloReply) {}
+  rpc sayHello (HelloRequest) returns (HelloResponse) {}
 }
 
 // The request message containing the user's name.
@@ -23,6 +23,6 @@ message HelloRequest {
 }
 
 // The response message containing the greetings
-message HelloReply {
+message HelloResponse {
   string message = 1;
 }
