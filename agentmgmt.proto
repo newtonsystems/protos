@@ -1,0 +1,69 @@
+//
+// James Tarball
+// Newtonsystems 2017
+//
+// Proto buffer service and message definitions 
+// for agentmgmt package
+//
+// https://developers.google.com/protocol-buffers/docs/style
+
+syntax = "proto3";
+
+package grpc_types;
+
+
+service AgentMgmt {
+  // AgentMgmt service // Go uses CamelCase so use it for API calls
+  rpc GetAvailableAgents (GetAvailableAgentsRequest) returns (GetAvailableAgentsResponse) {}
+  //rpc GetAgentIDFromRef (GetAgentIDFromRefRequest) returns (GetAgentIDFromRefResponse) {}
+  //rpc HeartBeat (HeartBeatRequest) returns (HeartBeatResponse) {}
+  //rpc AcceptCall (AcceptCallRequest) returns (AcceptCallResponse) {}
+
+}
+
+// ---------- GetAvailableAgents ------------------------------------------ //
+
+message GetAvailableAgentsRequest {
+}
+
+message GetAvailableAgentsResponse {
+  repeated string agent_ids = 1;
+}
+
+// ------------------------------------------------------------------------ //
+// ---------- GetAgentIDFromRef ------------------------------------------- //
+
+// message GetAgentIDFromRefRequest {
+// 	string message = 1;
+// }
+
+// // The response message containing the world greetings
+// message GetAgentIDFromRefResponse {
+//   string message = 1;
+// }
+
+// ------------------------------------------------------------------------ //
+// ---------- HeartBeat --------------------------------------------------- //
+
+// message HeartBeatRequest {
+// 	string message = 1;
+// }
+
+// // The response message containing the world greetings
+// message HeartBeatResponse {
+//   string message = 1;
+// }
+
+// // ------------------------------------------------------------------------ //
+// // ---------- AcceptCall -------------------------------------------------- //
+
+// message AcceptCallRequest {
+// 	string message = 1;
+// }
+
+// // The response message containing the world greetings
+// message AcceptCallResponse {
+//   string message = 1;
+// }
+
+// ------------------------------------------------------------------------ //

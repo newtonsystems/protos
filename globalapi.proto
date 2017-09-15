@@ -13,13 +13,16 @@ package grpc_types;
 
 import "hello.proto";
 import "world.proto";
+import "agentmgmt.proto";
 
 
 // TODO: CHANGE NAME TO MIXEDCAPS I.E. SayHello as oppose to sayHello
 //  when using GO will be SayHello -- this will stop confusion
+// REMEMBER: do NOT use - for .proto names
 service GlobalAPI {
   // All API calls from all services
   rpc sayHello (HelloRequest) returns (HelloResponse) {}
   rpc sayWorld (WorldRequest) returns (WorldResponse) {}
+  rpc GetAvailableAgents (GetAvailableAgentsRequest) returns (GetAvailableAgentsResponse) {}
 }
 
