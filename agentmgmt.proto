@@ -15,16 +15,15 @@ package grpc_types;
 service AgentMgmt {
   // AgentMgmt service // Go uses CamelCase so use it for API calls
   rpc GetAvailableAgents (GetAvailableAgentsRequest) returns (GetAvailableAgentsResponse) {}
-  //rpc GetAgentIDFromRef (GetAgentIDFromRefRequest) returns (GetAgentIDFromRefResponse) {}
-  //rpc HeartBeat (HeartBeatRequest) returns (HeartBeatResponse) {}
-  //rpc AcceptCall (AcceptCallRequest) returns (AcceptCallResponse) {}
-
+  rpc GetAgentIDFromRef (GetAgentIDFromRefRequest) returns (GetAgentIDFromRefResponse) {}
+  rpc HeartBeat (HeartBeatRequest) returns (HeartBeatResponse) {}
+  rpc AcceptCall (AcceptCallRequest) returns (AcceptCallResponse) {}
 }
 
 // ---------- GetAvailableAgents ------------------------------------------ //
 
 message GetAvailableAgentsRequest {
-	int32 limit = 1;
+  int32 limit = 1;
 }
 
 message GetAvailableAgentsResponse {
@@ -34,37 +33,34 @@ message GetAvailableAgentsResponse {
 // ------------------------------------------------------------------------ //
 // ---------- GetAgentIDFromRef ------------------------------------------- //
 
-// message GetAgentIDFromRefRequest {
-// 	string message = 1;
-// }
+message GetAgentIDFromRefRequest {
+  string ref_id = 1;
+}
 
-// // The response message containing the world greetings
-// message GetAgentIDFromRefResponse {
-//   string message = 1;
-// }
+message GetAgentIDFromRefResponse {
+  int32 agent_id = 1;
+}
 
 // ------------------------------------------------------------------------ //
 // ---------- HeartBeat --------------------------------------------------- //
 
-// message HeartBeatRequest {
-// 	string message = 1;
-// }
+message HeartBeatRequest {
+	string message = 1;
+}
 
-// // The response message containing the world greetings
-// message HeartBeatResponse {
-//   string message = 1;
-// }
+message HeartBeatResponse {
+  string message = 1;
+}
 
-// // ------------------------------------------------------------------------ //
-// // ---------- AcceptCall -------------------------------------------------- //
+// ------------------------------------------------------------------------ //
+// ---------- AcceptCall -------------------------------------------------- //
 
-// message AcceptCallRequest {
-// 	string message = 1;
-// }
+message AcceptCallRequest {
+	string message = 1;
+}
 
-// // The response message containing the world greetings
-// message AcceptCallResponse {
-//   string message = 1;
-// }
+message AcceptCallResponse {
+  string response = 1;
+}
 
 // ------------------------------------------------------------------------ //

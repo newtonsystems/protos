@@ -24,5 +24,8 @@ service GlobalAPI {
   rpc sayHello (HelloRequest) returns (HelloResponse) {}
   rpc sayWorld (WorldRequest) returns (WorldResponse) {}
   rpc GetAvailableAgents (GetAvailableAgentsRequest) returns (GetAvailableAgentsResponse) {}
+  rpc GetAgentIDFromRef (GetAgentIDFromRefRequest) returns (GetAgentIDFromRefResponse) {}
+  rpc HeartBeat (HeartBeatRequest) returns (HeartBeatResponse) {}
+  rpc AcceptCall (AcceptCallRequest) returns (AcceptCallResponse) {}
 }
 
