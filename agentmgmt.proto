@@ -2,7 +2,7 @@
 // James Tarball
 // Newtonsystems 2017
 //
-// Proto buffer service and message definitions 
+// Proto buffer service and message definitions
 // for agentmgmt package
 //
 // https://developers.google.com/protocol-buffers/docs/style
@@ -50,6 +50,11 @@ message HeartBeatRequest {
 
 message HeartBeatResponse {
   string message = 1;
+  enum HeartBeatStatus {
+    HEARTBEAT_SUCCESSFUL = 0;
+    HEARTBEAT_FAILED = 1;
+  }
+  HeartBeatStatus status = 2;
 }
 
 // ------------------------------------------------------------------------ //
