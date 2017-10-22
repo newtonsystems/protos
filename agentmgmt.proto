@@ -46,7 +46,7 @@ message GetAgentIDFromRefResponse {
 
 message HeartBeatRequest {
 	string message = 1;
-  string agent_id = 2;
+  int32 agent_id = 2;
 }
 
 message HeartBeatResponse {
