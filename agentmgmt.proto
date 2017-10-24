@@ -14,10 +14,22 @@ package grpc_types;
 
 service AgentMgmt {
   // AgentMgmt service // Go uses CamelCase so use it for API calls
+  rpc AddTask (AddTaskRequest) returns (AddTaskResponse) {}
   rpc GetAvailableAgents (GetAvailableAgentsRequest) returns (GetAvailableAgentsResponse) {}
   rpc GetAgentIDFromRef (GetAgentIDFromRefRequest) returns (GetAgentIDFromRefResponse) {}
   rpc HeartBeat (HeartBeatRequest) returns (HeartBeatResponse) {}
   rpc AcceptCall (AcceptCallRequest) returns (AcceptCallResponse) {}
+}
+
+// ---------- AddTask ----------------------------------------------------- //
+
+message AddTaskRequest {
+  int32 cust_id = 1;
+  repeated int32 call_ids = 2;
+}
+
+message AddTaskResponse {
+  int32 task_id = 1;
 }
 
 // ---------- GetAvailableAgents ------------------------------------------ //
