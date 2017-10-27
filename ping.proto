@@ -1,0 +1,27 @@
+//
+// James Tarball
+// Newtonsystems 2017
+//
+// Proto buffer service and message definitions
+// for ping package
+//
+// https://developers.google.com/protocol-buffers/docs/style
+
+syntax = "proto3";
+
+package grpc_types;
+
+
+service Ping {
+  // Go uses CamelCase so use it for API calls
+  rpc Ping (PingRequest) returns (PingResponse) {}
+}
+
+
+message PingRequest {
+  string message = 1;
+}
+
+message PingResponse {
+  string message = 1;
+}

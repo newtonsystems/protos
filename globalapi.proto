@@ -14,6 +14,7 @@ package grpc_types;
 import "hello.proto";
 import "world.proto";
 import "agentmgmt.proto";
+import "ping.proto";
 
 
 // TODO: CHANGE NAME TO MIXEDCAPS I.E. SayHello as oppose to sayHello
@@ -28,4 +29,5 @@ service GlobalAPI {
   rpc GetAgentIDFromRef (GetAgentIDFromRefRequest) returns (GetAgentIDFromRefResponse) {}
   rpc HeartBeat (HeartBeatRequest) returns (HeartBeatResponse) {}
   rpc AcceptCall (AcceptCallRequest) returns (AcceptCallResponse) {}
+  rpc Ping (PingRequest) returns (PingResponse) {}
 }
